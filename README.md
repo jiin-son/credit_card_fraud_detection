@@ -10,3 +10,10 @@
 - Time: seconds elapsed between that particular transaction and the first transaction in the data
 - Amount: transaction amount
 - Class: 1-fraudulent transaction, 0-genuine transaction
+
+***
+### from EDA Analysis:
+Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (target) variable. Also, KDE plots shows the distinct shape between 0 and 1 for these variables. 
+
+***
+### Feature Selection Analysis:

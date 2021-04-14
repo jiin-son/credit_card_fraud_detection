@@ -13,7 +13,7 @@
 
 ***
 ### from EDA Analysis:
-Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (target) variable. Also, KDE plots shows the distinct shape between 0 and 1 for these variables. 
+Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (target) variable. Also, KDE plots show the distinct shapes for 0s and 1s for these variables. 
 
 ***
 ### Feature Selection Analysis:

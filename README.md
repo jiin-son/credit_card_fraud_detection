@@ -17,3 +17,4 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 
 ***
 ### from Feature Selection Analysis:
+- Random Forest: how to decide how many variables should be selected?

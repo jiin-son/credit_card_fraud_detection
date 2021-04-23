@@ -20,5 +20,5 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 - Random Forest: how to decide how many variables should be selected? -> evaluated metrics and compared with the model with all the variables (rf with top 5 variables were slightly performed better (comparison result is saved in the excel file) -> how to generate roc_curve? 
 
 ### resampling
-- I guess resampling first and then feature selection 
+- (complete this by 4/25) 
 

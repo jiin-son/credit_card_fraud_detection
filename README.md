@@ -21,5 +21,5 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 
 ### oversampling due to unbalanced dataset 
 - (complete this by 5/2) 
-- 
+- SMOTE
 

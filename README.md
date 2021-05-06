@@ -21,5 +21,6 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 
 ### oversampling due to unbalanced dataset 
 - SMOTE: the precision score is not improving..
+- why oversampling reduces the precision value?
 - 
 

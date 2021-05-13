@@ -23,4 +23,6 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 - SMOTE: the precision score is not improving
 - standardized "Amount" and "Time" variable before oversampling and had the best F1 value  
 
-
+### Best metrics
+- rfc with oversampling - standardization - top9 variable (F1 = 79.67%)
+- rfc with oversampling - standardization - all variables (F1 = 82.91%)

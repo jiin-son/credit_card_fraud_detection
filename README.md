@@ -26,3 +26,7 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 ### Best metrics
 - rfc with oversampling - standardization - top9 variable (F1 = 79.67%)
 - rfc with oversampling - standardization - all variables (F1 = 82.91%)
+- logistic regression is not performing well
+- standardization is necessary for "Amount" and "Time" variable
+- using all variables doesn't improve F1 score too much
+- How to select the most valuable variables? -> Key

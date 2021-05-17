@@ -31,3 +31,4 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 - standardization is necessary for "Amount" and "Time" variable
 - using all variables doesn't improve F1 score too much
 - How to select the most valuable variables? -> Key: random forest feature selection 
+- CNN, RNN, SVM, Reinforcement Learning, Random Forest/GBM

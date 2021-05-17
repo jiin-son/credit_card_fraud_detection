@@ -22,6 +22,7 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 ### oversampling due to unbalanced dataset 
 - SMOTE: the precision score is not improving
 - standardized "Amount" and "Time" variable before oversampling and had the best F1 value  
+- caution: use random foreset classifier not the regressor
 
 ### Best metrics
 - rfc with oversampling - standardization - top9 variable (F1 = 79.67%)
@@ -29,4 +30,4 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 - logistic regression is not performing well
 - standardization is necessary for "Amount" and "Time" variable
 - using all variables doesn't improve F1 score too much
-- How to select the most valuable variables? -> Key: random forest feature selection
+- How to select the most valuable variables? -> Key: random forest feature selection 

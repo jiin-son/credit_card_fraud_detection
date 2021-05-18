@@ -25,7 +25,7 @@ Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (t
 - caution: use random foreset classifier not the regressor
 
 ### Best metrics
-- rfc with oversampling - standardization - top9 variable (F1 = 79.67%)
+- rfc with oversampling - standardization - top9 variable (F1 = 79.67%) -> how do you know if this is overfitting
 - rfc with oversampling - standardization - all variables (F1 = 82.91%)
 - logistic regression is not performing well
 - standardization is necessary for "Amount" and "Time" variable

@@ -16,6 +16,17 @@
 Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (target) variable. Also, KDE plots show the distinct shapes for 0s and 1s for these variables. 
 
 ***
+1. split: splitting first and oversampling only the tran data so that we don't need to necessarily change anything from the test data.
+2. transformation/standardization: "Amount" and "Time" variable only - other variables are already standardized from the PCA process (initial data processing)
+3. oversampling
+4. Feature Selection: used SelectFromModel Function
+5. split with the selected features
+6. no need to transformation/standardization: no "Amount" or "Time" variable were selected
+7. oversampling
+8. train/fit the model
+9. evalate the metrics
+
+***
 ### from Feature Selection Analysis:
 - Random Forest: how to decide how many variables should be selected? -> evaluated metrics and compared with the model with all the variables (rf with top 5 variables were slightly performed better (comparison result is saved in the excel file) -> how to generate roc_curve? 
 

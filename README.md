@@ -42,12 +42,12 @@ Here is the steps I took to build the model:
 
 8. **Train/fit the model**
 Here is the list of models I built and compared:
-- Logistic Regression: Used **LogisticRegression** from sklearn.linear_model.
-https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
-- Random Forest: Used **RandomForestClassifier** from sklearn.ensemble.
-https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
-- XGBoost: Used **GradientBoostingClassifier** from sklearn.ensemble.
-https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html
+        - Logistic Regression: Used **LogisticRegression** from sklearn.linear_model.
+            https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+        - Random Forest: Used **RandomForestClassifier** from sklearn.ensemble.
+            https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+        - XGBoost: Used **GradientBoostingClassifier** from sklearn.ensemble.
+            https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html
 
 9. **Evaluating the metrics**
 - Accuracy:

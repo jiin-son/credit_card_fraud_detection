@@ -1,8 +1,8 @@
 # credit_card_fraud_detection
 
-### In this project, I'm building a fraud model using data from Kaggle. I'm currently reviewing fraud models at my job and I wanted to build one by my own. My goal is to update github everyday with my progress. I hope this project will lead me to further growth in my career. 
+In this project, I built a best model to detect the credit card fraudulent transaction using data from Kaggle. I have been reviewing fraud models at my job and I wanted to build one by my own. I updated github with my progress. I hope this project will lead me to further growth in my career. 
 
-### The data used in this project was retrived from: https://www.kaggle.com/mlg-ulb/creditcardfraud
+The data used in this project was retrived from: https://www.kaggle.com/mlg-ulb/creditcardfraud
 
 ***
 ### Variables:
@@ -21,18 +21,46 @@ Some findings from EDA Analysis:
 
 ***
 ### from Feature Selection Analysis: 
-To select the most important variables, I used **SelectFromModel** from sklearn.feature_selection. SelectFromModel is a Meta-transformer for selecting features based on importance weights. See https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html for more details.
+In this file, I built the models using different techniques (i.e. splitting train/test dataset, standardization, oversapling, feature selection).
 
 Here is the steps I took to build the model: 
-1. **Spliting Train/Test dataset**: Splitting train/test data with all variables for feature selection process. The reason why we split the data before the feature selection is not to have any access in any test set during the model fitting process. 
-2. **Transformation/standardization on "Amount" and "Time" variable only**: Other variables are already provided with standardized format from the PCA process (initial data processing). In this process, I used StandardScaler from sklearn.preprocessing. https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
-3. **Oversampling**: The data provided is the imbalanced data and to reduce the classification error for fraudulent transactions, we oversample the data. The reason why we are oversampling before the feature selection is because most variable selection methods assume that the samples are independent. To oversample the fraud transactions, I used **SMOTE** from imblearn.over_sampling.
-4. **Feature Selection**: To select the most important variables, I used **SelectFromModel** from sklearn.feature_selection. SelectFromModel is a Meta-transformer for selecting features based on importance weights. See https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html for more details.\ Selected variables: ['V2', 'V3', 'V4', 'V10', 'V11', 'V12', 'V14', 'V16', 'V17']
-5. **Spliting Tran/Test dataset only with the selected features**
-6. Skipping transformation/standardization process: no "Amount" or "Time" variable were selected from the Feature Selection process
-7. **Oversampling**
+1. **Spliting Train/Test dataset**: Splitting train/test data with all variables for feature selection process. The reason why we split the data before the feature selection is not to have any access in any test set during the model fitting process. In this process, train_test_split was used from sklearn.model_selection. See https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html for more details.
+
+2. **Transformation/standardization on "Amount" and "Time" variable only**: Other variables are already provided with standardized format from the PCA process (initial data processing). In this process, I used **StandardScaler** from sklearn.preprocessing. This standardize feature removes the mean and scales to unit variance. See https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html for more details.
+
+3. **Oversampling**: The data provided is the imbalanced data and to reduce the classification error for fraudulent transactions, we oversample the data. The reason why we are oversampling before the feature selection is because most variable selection methods assume that the samples are independent. To oversample the fraud transactions, I used **SMOTE** from imblearn.over_sampling. The SMOTE function oversamples the rare event by using bootstrapping and k-nearest neighbor to synthetically create additional observations of that event. See https://imbalanced-learn.org/stable/over_sampling.html for more details.
+
+4. **Feature Selection**: To select the most important variables, I used **SelectFromModel** from sklearn.feature_selection. SelectFromModel is a Meta-transformer for selecting features based on importance weights. See https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html for more details.
+
+    Selected variables: ['V2', 'V3', 'V4', 'V10', 'V11', 'V12', 'V14', 'V16', 'V17']
+
+5. **Spliting Tran/Test dataset only with the selected features**: In this process, I used the same random_state (12) parameters in the function to keep the train/test data same with the previous steps. It can be done by subsetting the splitted data from Step 1.  
+
+6. Skipping transformation/standardization process: no "Amount" or "Time" variable were selected from the Feature Selection process. 
+
+7. **Oversampling**: Oversampled the new train data from Step 5. 
+
 8. **Train/fit the model**
-9. evalate the metrics
+Here is the list of models I built and compared:
+- Logistic Regression: Used **LogisticRegression** from sklearn.linear_model.
+https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+- Random Forest: Used **RandomForestClassifier** from sklearn.ensemble.
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+- XGBoost: Used **GradientBoostingClassifier** from sklearn.ensemble.
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html
+
+9. **Evaluating the metrics**
+- Accuracy:
+- F1 score:
+- Precision (Sensitivity):
+- Recall:
+- AUROC: 
+
+***
+### Conclusion
+
+***
+### Further Consideration
 
 ***
 ### from Feature Selection Analysis:

@@ -2,10 +2,10 @@
 
 ### In this project, I'm building a fraud model using data from Kaggle. I'm currently reviewing fraud models at my job and I wanted to build one by my own. My goal is to update github everyday with my progress. I hope this project will lead me to further growth in my career. 
 
-### the data was retrived from: https://www.kaggle.com/mlg-ulb/creditcardfraud
+### The data I used in this project was retrived from: https://www.kaggle.com/mlg-ulb/creditcardfraud
 
 ***
-### variables:
+### Variables:
 - V1-V28: transfomred by PCA
 - Time: seconds elapsed between that particular transaction and the first transaction in the data
 - Amount: transaction amount
@@ -13,9 +13,14 @@
 
 ***
 ### from EDA Analysis:
-Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (target) variable. Also, KDE plots show the distinct shapes for 0s and 1s for these variables. 
+Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (target) variable. Also, KDE plots show the distinct shapes for 0s and 1s for these variables. \
+The target variable (Class) is highly imbalanced, where geneuine transaction is 284315 and the fraudulent transaction is 492. Classification were designed around the assumption of an equal number of examples for each class. This results in models that have poor predictive performance, specifically minority class (fraudulent transaction, in this case). For this kind of fraud problems, we are looking for predictive power especially for minority class (fraud cases). To reduce the classification error for mminority class, **oversampling** technique will be used during the modeling process. 
 
 ***
+### from Feature Selection Analysis: 
+To select the most important variables, I used **SelectFromModel** from sklearn.feature_selection. SelectFromModel is a Meta-transformer for selecting features based on importance weights. See https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html for more details.
+
+
 1. split: splitting first and oversampling only the tran data so that we don't need to necessarily change anything from the test data.
 2. transformation/standardization: "Amount" and "Time" variable only - other variables are already standardized from the PCA process (initial data processing)
 3. oversampling

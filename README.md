@@ -34,7 +34,7 @@ Here is the steps I took to build the model:
 
     Selected variables: ['V2', 'V3', 'V4', 'V10', 'V11', 'V12', 'V14', 'V16', 'V17']
 
-5. **Spliting Tran/Test dataset only with the selected features**: In this process, I used the same random_state (12) parameters in the function to keep the train/test data same with the previous steps. It can be done by subsetting the splitted data from Step 1.  
+5. **Spliting Train/Test dataset only with the selected features**: In this process, I used the same random_state (12) parameters in the function to keep the train/test data same with the previous steps. It can be done by subsetting the splitted data from Step 1.  
 
 6. Skipping transformation/standardization process: no "Amount" or "Time" variable were selected from the Feature Selection process. 
 
@@ -58,24 +58,13 @@ https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoost
 
 ***
 ### Conclusion
+The reasons why I used feature selection process is to 1) reduce the runtime 2) improve the model performance 3) reduce the overfitting 4) increase interpretability. To see if the model overfits, I used different random_state parameters. Using different random_state did not impact the metrics; thus, no concern on the overfitting issue. Interpretability can be improved if we know the actual variables (data limitation). Although the models with feature selection process didn't improve the model importance much (I also evaluated each model with all the variables but it didn't help much to increase F1 score.), the run time was significantly reduced. 
+
+Thus, the best model is the random forest model with F1 score 78.57%, Precision 77.34%, Recall 79.84%, and AUROC 89.90%.
 
 ***
 ### Further Consideration
-
-***
-### from Feature Selection Analysis:
-- Random Forest: how to decide how many variables should be selected? -> evaluated metrics and compared with the model with all the variables (rf with top 5 variables were slightly performed better (comparison result is saved in the excel file) -> how to generate roc_curve? 
-
-### oversampling due to unbalanced dataset 
-- SMOTE: the precision score is not improving
-- standardized "Amount" and "Time" variable before oversampling and had the best F1 value  
-- caution: use random foreset classifier not the regressor
-
-### Best metrics
-- rfc with oversampling - standardization - top9 variable (F1 = 79.67%) -> how do you know if this is overfitting
-- rfc with oversampling - standardization - all variables (F1 = 82.91%)
-- logistic regression is not performing well
-- standardization is necessary for "Amount" and "Time" variable
-- using all variables doesn't improve F1 score too much
-- How to select the most valuable variables? -> Key: random forest feature selection 
-- CNN, RNN, SVM, Reinforcement Learning, Random Forest/GBM, ensemble
+- using different parameters in the model
+- considering more advanced models: CNN, RNN, SVM, Reinforcement Learning, Random Forest/GBM, ensemble
+- considering different feature selection methods
+- using dataset with raw variables for interpretability.

@@ -2,7 +2,7 @@
 
 ### In this project, I'm building a fraud model using data from Kaggle. I'm currently reviewing fraud models at my job and I wanted to build one by my own. My goal is to update github everyday with my progress. I hope this project will lead me to further growth in my career. 
 
-### The data I used in this project was retrived from: https://www.kaggle.com/mlg-ulb/creditcardfraud
+### The data used in this project was retrived from: https://www.kaggle.com/mlg-ulb/creditcardfraud
 
 ***
 ### Variables:
@@ -12,9 +12,12 @@
 - Class: 1-fraudulent transaction, 0-genuine transaction
 
 ***
-### from EDA Analysis:
-Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (target) variable. Also, KDE plots show the distinct shapes for 0s and 1s for these variables. \
-The target variable (Class) is highly imbalanced, where geneuine transaction is 284315 and the fraudulent transaction is 492. Classification were designed around the assumption of an equal number of examples for each class. This results in models that have poor predictive performance, specifically minority class (fraudulent transaction, in this case). For this kind of fraud problems, we are looking for predictive power especially for minority class (fraud cases). To reduce the classification error for mminority class, **oversampling** technique will be used during the modeling process. 
+### from Explanatory Data Analysis (EDA):
+Before modeling process, I briefly explored data using correlation heatmap and KDE plots to understand the data. \
+
+Some findings from EDA Analysis:
+- Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (target) variable. Also, KDE plots show the distinct shapes for 0s and 1s for these variables. \
+- The target variable (Class) is highly imbalanced, where geneuine transaction is 284315 and the fraudulent transaction is 492. Classification were designed around the assumption of an equal number of examples for each class. This results in models that have poor predictive performance, specifically minority class (fraudulent transaction, in this case). For this kind of fraud problems, we are looking for predictive power especially for minority class (fraud cases). To reduce the classification error for mminority class, **oversampling** technique will be used during the modeling process. 
 
 ***
 ### from Feature Selection Analysis: 

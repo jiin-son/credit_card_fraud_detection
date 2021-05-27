@@ -51,10 +51,10 @@ https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoost
 
 9. **Evaluating the metrics**
 - Accuracy:
-- F1 score:
+- F1 score: 
 - Precision (Sensitivity):
 - Recall:
-- AUROC: 
+- AUROC (Area under the receiver underlying characteristic): 
 
 ***
 ### Conclusion

@@ -51,10 +51,10 @@ https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoost
 
 9. **Evaluating the metrics**
 - Accuracy:
-- F1 score: 
-- Precision (Sensitivity):
-- Recall:
-- AUROC (Area under the receiver underlying characteristic): 
+- F1 score: combination of the precision and recall of the model (harmonic mean of the model's precision and recall). I used F1 score as a main metric to select the best model. 
+- Precision (Sensitivity): what proportion of positive identifications (predicted as fraud) was actually correct? 
+- Recall: what proportion of actual positives (fraud) was identified correctly?
+- AUROC (Area under the receiver underlying characteristic): measures the discriminatory power
 
 ***
 ### Conclusion

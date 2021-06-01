@@ -4,6 +4,8 @@ In this project, I built a best model to detect the credit card fraudulent trans
 
 The data used in this project was retrived from: https://www.kaggle.com/mlg-ulb/creditcardfraud
 
+See my medium post (link here) for more detail description on the model building process. 
+
 ***
 ### Variables:
 - V1-V28: transfomred by PCA
@@ -67,3 +69,4 @@ Thus, the best model is the random forest model with F1 score 78.57%, Precision 
 - considering more advanced models: CNN, RNN, SVM, Reinforcement Learning, Random Forest/GBM, ensemble
 - considering different feature selection methods
 - using dataset with raw variables for interpretability.
+

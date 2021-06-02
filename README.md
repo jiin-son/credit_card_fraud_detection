@@ -42,13 +42,13 @@ Here are the steps I took to build the model:
 
 7. **Oversampling**: Oversampled the new train data from Step 5. 
 
-8. **Train/fit the model**
+8. **Train/fit the model **: Binary Classification
 Here is the list of models I built and compared:
-- Logistic Regression: Used **LogisticRegression** from sklearn.linear_model. \
+- Logistic Regression: Used **LogisticRegression** from sklearn.linear_model. - simple, highly interpretable \
 https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
-- Random Forest: Used **RandomForestClassifier** from sklearn.ensemble. \
+- Random Forest: Used **RandomForestClassifier** from sklearn.ensemble. - tree-based model (ensamble model), extendibility (can be used in both classification and regression problem), good prediction power (usually used in banking), feature importance analysis (ranks relative importance of each variable\
 https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
-- XGBoost: Used **GradientBoostingClassifier** from sklearn.ensemble. \
+- XGBoost: Used **GradientBoostingClassifier** from sklearn.ensemble. - tree-based model, extendivility, high flexibility (custom objective function and custom evaluation metrics), feature importance analysis\
 https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html
 
 9. **Evaluating the metrics**

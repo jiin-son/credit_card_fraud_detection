@@ -36,7 +36,7 @@ Here are the steps I took to build the model:
 
     Selected variables: ['V2', 'V3', 'V4', 'V10', 'V11', 'V12', 'V14', 'V16', 'V17']
 
-5. **Spliting Train/Test dataset only with the selected features**: In this process, I used the same random_state (12) parameters in the function to keep the train/test data same with the previous steps. It can be done by subsetting the splitted data from Step 1.  
+5. **Spliting Train/Test dataset only with the selected features**: In this process, I used the same random_state (12) parameters in the function to keep the train/test data same with the previous steps.  
 
 6. Skipping transformation/standardization process: no "Amount" or "Time" variable were selected from the Feature Selection process. 
 

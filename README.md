@@ -56,7 +56,38 @@ https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoost
 - Precision (Sensitivity): what proportion of positive identifications (predicted as fraud) was actually correct? 
 - Recall: what proportion of actual positives (fraud) was identified correctly?
 - AUROC (Area under the receiver underlying characteristic): measures the discriminatory power
-
+<table style="width:100%">
+  <tr>
+    <th>Metrics</th>
+    <th>RandomForest</th>
+    <th>LogisticRegression</th>
+    <th>XGBoost</th>
+  </tr>
+  <tr>
+    <td>F1 score</td>
+    <td>78.57%</td>
+    <td>10.81%</td>
+    <td>15.40%</td>
+  </tr>
+  <tr>
+    <td>Precision</td>
+    <td>77.34%</td>
+    <td>5.76%</td>
+    <td>8.44%</td>
+  </tr>
+  <tr>
+    <td>Recall</td>
+    <td>79.84%</td>
+    <td>88.71%</td>
+    <td>87.90%</td>
+  </tr>
+  <tr>
+    <td>AUROC</td>
+    <td>89.90%</td>
+    <td>93.09%</td>
+    <td>93.12%</td>
+  </tr>
+</table>
 ***
 ### Conclusion
 The reasons why I used feature selection process is to 1) reduce the runtime 2) improve the model performance 3) reduce the overfitting 4) increase interpretability. To see if the model overfits, I used different random_state parameters. Using different random_state did not impact the metrics; thus, no concern on the overfitting issue. Interpretability can be improved if we know the actual variables (data limitation). Although the models with feature selection process didn't improve the model importance much (I also evaluated each model with all the variables but it didn't help much to increase F1 score.), the run time was significantly reduced. 
@@ -68,5 +99,4 @@ Thus, the best model is the random forest model with F1 score 78.57%, Precision 
 - using different parameters in the model
 - considering more advanced models: CNN, RNN, SVM, Reinforcement Learning, Random Forest/GBM, ensemble
 - considering different feature selection methods
-- using dataset with raw variables for interpretability.
-
+- using dataset with raw variables for interpretability

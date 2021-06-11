@@ -1,6 +1,6 @@
 # credit_card_fraud_detection
 
-In this project, I built a best model to detect the credit card fraudulent transaction using data from Kaggle. I have been reviewing fraud models at my job and I wanted to build one by my own. I updated github with my progress. I hope this project will lead me to further growth in my career. 
+In this project, I built a model to detect the credit card fraudulent transaction using data from Kaggle. I have been reviewing fraud models at my job and I wanted to build one by my own. I updated github with my progress. I hope this project will lead me to further growth in my career. 
 
 The data used in this project was retrived from: https://www.kaggle.com/mlg-ulb/creditcardfraud
 

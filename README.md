@@ -91,9 +91,9 @@ https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoost
 
 ***
 ### Conclusion
-The reasons why I used feature selection process is to 1) reduce the runtime 2) improve the model performance 3) reduce the overfitting 4) increase interpretability. To see if the model overfits, I used different random_state parameters. Using different random_state did not impact the metrics; thus, no concern on the overfitting issue. Interpretability can be improved if we know the actual variables (data limitation). Although the models with feature selection process didn't improve the model importance much (I also evaluated each model with all the variables but it didn't help much to increase F1 score.), the run time was significantly reduced. 
+The reasons why I used feature selection process is to 1) reduce the runtime 2) improve the model performance 3) reduce the overfitting 4) increase interpretability. (To see if the model overfits, I used different random_state parameters. Using different random_state did not impact the metrics; thus, no concern on the overfitting issue.) Interpretability can be improved if we know the actual variables (data limitation). Although the models with feature selection process didn't improve the model importance much (I also evaluated each model with all the variables but it didn't help much to increase F1 score.), the run time was significantly reduced. 
 
-Thus, the best model is the random forest model with F1 score 78.57%, Precision 77.34%, Recall 79.84%, and AUROC 89.90%.
+Thus, the best model is the random forest model with F1 score 78.57%, Precision 77.34%, Recall 79.84%, and AUROC 89.90%. 
 
 ***
 ### Further Consideration

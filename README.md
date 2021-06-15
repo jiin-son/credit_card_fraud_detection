@@ -23,7 +23,7 @@ Some findings from EDA Analysis:
 
 ***
 ### from Feature Selection Analysis: 
-In this file, I built the models using different techniques (i.e. splitting train/test dataset, standardization, oversapling, feature selection).
+In this file, I built the models using some modeling techniques (i.e. splitting train/test dataset, standardization, oversapling, feature selection).
 
 Here are the steps I took to build the model: 
 1. **Spliting Train/Test dataset**: Splitting train/test data with all variables for feature selection process. The reason why we split the data before the feature selection is not to have any access in any test set during the model fitting process. In this process, train_test_split was used from sklearn.model_selection. See https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html for more details.

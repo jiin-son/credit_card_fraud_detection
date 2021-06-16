@@ -4,7 +4,7 @@ In this project, I built a model to detect the credit card fraudulent transactio
 
 The data used in this project was retrived from: https://www.kaggle.com/mlg-ulb/creditcardfraud
 
-See my medium post (link here) for more detail description on the model building process. 
+See my medium post (link to be here) for more detail description on the model building process. 
 
 ***
 ### Variables:

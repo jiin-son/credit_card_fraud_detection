@@ -19,7 +19,7 @@ Before modeling process, I briefly explored data using correlation heatmap and K
 
 Some findings from EDA Analysis:
 - Variable V17, V14, V12, V10, V16 show high correlation value with the 'Class' (target) variable. Also, KDE plots show the distinct shapes for 0s and 1s for these variables.
-- The target variable (Class) is highly imbalanced, where geneuine transaction is 284315 and the fraudulent transaction is 492. Classification were designed around the assumption of an equal number of examples for each class. This results in models that have poor predictive performance, specifically minority class (fraudulent transaction, in this case). For this kind of fraud problems, we are looking for predictive power especially for minority class (fraud cases). To reduce the classification error for minority class, **oversampling** technique will be used during the modeling process. 
+- The target variable (Class) is highly imbalanced, where geneuine transaction is 284315 and the fraudulent transaction is 492. Classification were designed around the assumption of an equal number of examples for each class. Thus, imbalanced data could result in poor predictive performance, specifically for predicting minority class (fraudulent transaction, in this case). To reduce the classification error for minority class, **oversampling** technique will be used during the modeling process. 
 
 ***
 ### from Feature Selection Analysis: 
@@ -30,7 +30,7 @@ Here are the steps I took to build the model:
 
 2. **Transformation/standardization on "Amount" and "Time" variable only**: Other variables are already provided with standardized format from the PCA process (initial data processing). In this process, I used **StandardScaler** from sklearn.preprocessing. This standardize feature removes the mean and scales to unit variance. See https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html for more details.
 
-3. **Oversampling**: The data used in this project is the imbalanced data. To reduce the classification error for fraudulent transactions, I oversampled the data. The reason why I oversamped before the feature selection is because most variable selection methods assume that the samples are independent. To oversample the fraud transactions, I used **SMOTE** from imblearn.over_sampling. The SMOTE function oversamples the rare event by using bootstrapping and k-nearest neighbor to synthetically create additional observations of that event. See https://imbalanced-learn.org/stable/over_sampling.html for more details.
+3. **Oversampling**: The data used in this project is the imbalanced data. To reduce the classification error for fraudulent transactions, I oversampled the data. The reason why I oversamped before the feature selection is that most variable selection methods assume that the samples are independent. To oversample the fraud transactions, I used **SMOTE** from imblearn.over_sampling. The SMOTE function oversamples the rare events by using bootstrapping and k-nearest neighbor to synthetically create additional observations of that event. See https://imbalanced-learn.org/stable/over_sampling.html for more details.
 
 4. **Feature Selection**: To select the most important variables, I used **SelectFromModel** from sklearn.feature_selection. SelectFromModel is a Meta-transformer for selecting features based on importance weights. See https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html for more details.
 
@@ -38,7 +38,7 @@ Here are the steps I took to build the model:
 
 5. **Spliting Train/Test dataset only with the selected features**: In this process, I used the same random_state (12) parameters in the function to keep the train/test data same with the previous steps.  
 
-6. Skipping transformation/standardization process: no "Amount" or "Time" variable were selected from the Feature Selection process. 
+6. Skipping transformation/standardization process: No "Amount" or "Time" variable were selected from the Feature Selection process. Thus, transformation step is not needed.
 
 7. **Oversampling**: Oversampled the new train data from Step 5. 
 

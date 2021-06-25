@@ -56,38 +56,38 @@ https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoost
 - Precision (Sensitivity): what proportion of positive identifications (predicted as fraud) was actually correct? 
 - Recall: what proportion of actual positives (fraud) was identified correctly?
 - AUROC (Area under the receiver underlying characteristic): measures the discriminatory power
-<table style="width:100%">
-  <tr>
-    <th>Metrics</th>
-    <th>RandomForest</th>
-    <th>LogisticRegression</th>
-    <th>XGBoost</th>
-  </tr>
-  <tr>
-    <td>F1 score</td>
-    <td>78.57%</td>
-    <td>10.81%</td>
-    <td>15.40%</td>
-  </tr>
-  <tr>
-    <td>Precision</td>
-    <td>77.34%</td>
-    <td>5.76%</td>
-    <td>8.44%</td>
-  </tr>
-  <tr>
-    <td>Recall</td>
-    <td>79.84%</td>
-    <td>88.71%</td>
-    <td>87.90%</td>
-  </tr>
-  <tr>
-    <td>AUROC</td>
-    <td>89.90%</td>
-    <td>93.09%</td>
-    <td>93.12%</td>
-  </tr>
-</table>
+    <table style="width:100%">
+      <tr>
+        <th>Metrics</th>
+        <th>RandomForest</th>
+        <th>LogisticRegression</th>
+        <th>XGBoost</th>
+      </tr>
+      <tr>
+        <td>F1 score</td>
+        <td>78.57%</td>
+        <td>10.81%</td>
+        <td>15.40%</td>
+      </tr>
+      <tr>
+        <td>Precision</td>
+        <td>77.34%</td>
+        <td>5.76%</td>
+        <td>8.44%</td>
+      </tr>
+      <tr>
+        <td>Recall</td>
+        <td>79.84%</td>
+        <td>88.71%</td>
+        <td>87.90%</td>
+      </tr>
+      <tr>
+        <td>AUROC</td>
+        <td>89.90%</td>
+        <td>93.09%</td>
+        <td>93.12%</td>
+      </tr>
+    </table>
 
 ***
 ### Conclusion

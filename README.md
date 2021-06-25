@@ -42,7 +42,7 @@ Here are the steps I took to build the model:
 
 7. **Oversampling**: Oversampled the new train data from Step 5. 
 
-8. **Train/fit the model **: Binary Classification
+8. **Train/fit the model**: Binary Classification
 Here is the list of models I built and compared:
 - Logistic Regression: Used **LogisticRegression** from sklearn.linear_model. - simple, highly interpretable \
 https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html

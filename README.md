@@ -22,8 +22,8 @@ Some findings from EDA Analysis:
 - The target variable (Class) is highly imbalanced, where geneuine transaction is 284315 and the fraudulent transaction is 492. Classification were designed around the assumption of an equal number of examples for each class. Thus, imbalanced data could result in poor predictive performance, specifically for predicting minority class (fraudulent transaction, in this case). To reduce the classification error for minority class, **oversampling** technique will be used during the modeling process. 
 
 ***
-### from Feature Selection Analysis: 
-In this file, I built the models using some modeling techniques (i.e. splitting train/test dataset, standardization, oversapling, feature selection).
+### Building Fraud Detection Model: 
+Through the "Fraud_Detection_Model" colab file, I built the models using some modeling techniques (i.e. splitting train/test dataset, standardization, oversapling, feature selection).
 
 Here are the steps I took to build the model: 
 1. **Spliting Train/Test dataset**: Splitting train/test the original data set to prepare feature selection process. The reason why I split the data before the feature selection is not to have any access in any test set during the model fitting process. In this process, train_test_split was used from sklearn.model_selection. See https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html for more details.
